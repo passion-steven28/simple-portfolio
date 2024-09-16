@@ -1,7 +1,9 @@
 import React from 'react'
 import { Separator } from '../ui/separator'
-import { Card, CardContent } from '../ui/card'
+import { CardContent } from '../ui/card'
 import { Code, Phone, ScissorsSquare, TrendingUp } from 'lucide-react'
+import { CardSpotlight } from '../ui/card-spotlight'
+import { VelocityScroll } from '../magicui/scroll-based-velocity'
 
 const services = [
     {
@@ -29,20 +31,22 @@ const services = [
 const ServiceSection = () => {
     return (
         <div className='flex flex-col items-center justify-center gap-4 px-20 w-full h-screen'>
-            <h1 className='text-center text-6xl font-bold tracking-tight text-white'>
-                Collaborate with brands and agencies to create innovative digital products and services.
-            </h1>
+            <VelocityScroll
+                text="Collaborate with brands and agencies to create innovative digital products and services."
+                default_velocity={2}
+                className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
+            />
             <Separator />
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8'>
                 {
                     services.map((service) => (
-                        <Card key={service.name} >
+                        <CardSpotlight key={service.name} className='p-8'>
                             <CardContent className='p-8'>
                                 {service.icon}
                                 <h1 className='text-2xl font-bold tracking-tight text-white'>{service.name}</h1>
                                 <p className='text-sm text-white'>{service.description}</p>
                             </CardContent>
-                        </Card>
+                        </CardSpotlight>
                     ))
                 }
             </div>

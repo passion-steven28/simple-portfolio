@@ -3,6 +3,8 @@ import React from 'react'
 import { Button } from '../ui/button'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import GradualSpacing from '../magicui/gradual-spacing'
+import ShimmerButton from '../magicui/shimmer-button'
 
 const ContactSection = () => {
     return (
@@ -16,19 +18,23 @@ const ContactSection = () => {
             </h1>
 
             <div className='flex items-center justify-center gap-4 mt-10 w-full'>
-                <Button>
-                    <Link href='mailto:passionsteven28@gmail.com'>
-                        Email
-                    </Link>
-                </Button>
-                <Button>
-                    <Link href='https://wa.me/255747776063'>
-                        WhatsApp
-                    </Link>
-                </Button>
+                {btn('Email', 'mailto:passionsteven28@gmail.com')}
+                {btn('WhatsApp', 'https://wa.me/255747776063')}
             </div>
         </div>
     )
 }
 
 export default ContactSection
+
+const btn = (name: string, href: string) => {
+    return (
+        <ShimmerButton className="shadow-2xl">
+            <Link href={href}>
+                <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                {name}
+                </span>
+            </Link>
+        </ShimmerButton>
+    )
+}
