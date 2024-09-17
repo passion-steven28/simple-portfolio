@@ -30,14 +30,14 @@ const services = [
 
 const ServiceSection = () => {
     return (
-        <div className='flex flex-col items-center justify-center gap-4 px-20 w-full h-screen'>
+        <div className='flex flex-col items-center justify-center gap-4 px-4 md:px-20 w-full min-h-screen'>
             <VelocityScroll
                 text="Collaborate with brands and agencies to create innovative digital products and services."
                 default_velocity={2}
                 className="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm dark:text-white md:text-7xl md:leading-[5rem]"
             />
             <Separator />
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 h-full'>
                 {
                     services.map((service) => (
                         <CardSpotlight key={service.name} className='p-8'>

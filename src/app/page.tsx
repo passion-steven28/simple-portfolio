@@ -4,14 +4,14 @@ import ServiceSection from "@/components/section/service-section";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen">
-      <div className="h-screen w-screen overflow-hidden">
+    <main className="">
+      <div className="h-screen w-full overflow-hidden">
         <HeroSection />
       </div>
-      <div className="h-screen w-screen">
+      <div className="size-full">
         <ServiceSection />
       </div>
-      <div className="h-screen w-screen">
+      <div className="h-screen w-full">
         <ContactSection />
       </div>
     </main>

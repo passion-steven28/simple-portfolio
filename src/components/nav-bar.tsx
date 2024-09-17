@@ -23,16 +23,6 @@ const navLinks = [
         href: 'https://www.instagram.com/sanjana_airlines/',
         icon: 'Instagram'
     },
-    {
-        name: 'facebook',
-        href: 'https://www.facebook.com/sanjana.airlines/',
-        icon: 'Facebook'
-    },
-    {
-        name: 'youtube',
-        href: 'https://www.youtube.com/channel/UC-0-w-5-2-1-3',
-        icon: 'Youtube'
-    }
 ]
 
 const NavBar = () => {
@@ -43,7 +33,7 @@ const NavBar = () => {
                     CV
                 </span>
             </ShimmerButton>
-            <div className='flex items-center space-x-4'>
+            <div className='flex items-center space-x-4 text-sm md:text-4xl'>
                 {navLinks.map((link) => (
                     <Link key={link.name} href={link.href} className='hover:underline'>
                         <h1>{link.name}</h1>

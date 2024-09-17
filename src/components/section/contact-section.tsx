@@ -1,9 +1,7 @@
 import { Handshake } from 'lucide-react'
 import React from 'react'
-import { Button } from '../ui/button'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
-import GradualSpacing from '../magicui/gradual-spacing'
 import ShimmerButton from '../magicui/shimmer-button'
 
 const ContactSection = () => {
@@ -13,7 +11,7 @@ const ContactSection = () => {
                 <Handshake size={40} />
             </div>
 
-            <h1 className='text-center text-6xl font-bold tracking-tight text-white'>
+            <h1 className='text-center text-xl md:text-6xl font-bold tracking-tight text-white'>
                 Tell me about your next project!
             </h1>
 
