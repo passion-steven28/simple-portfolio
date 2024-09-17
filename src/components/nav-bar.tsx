@@ -33,7 +33,7 @@ const NavBar = () => {
                     CV
                 </span>
             </ShimmerButton>
-            <div className='flex items-center space-x-4 text-sm md:text-4xl'>
+            <div className='flex items-center space-x-4 text-sm md:text-2xl'>
                 {navLinks.map((link) => (
                     <Link key={link.name} href={link.href} className='hover:underline'>
                         <h1>{link.name}</h1>

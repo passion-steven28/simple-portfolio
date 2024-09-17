@@ -277,7 +277,7 @@ const ShaderMaterial = ({
         });
 
         return materialObject;
-    }, [size.width, size.height, source]);
+    }, [source, getUniforms]);
 
     return (
         <mesh ref={ref as any}>
